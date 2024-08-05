@@ -1,0 +1,23 @@
+cabal-version:       2.4
+name:                SortingBenchmark
+version:             0.1.0.0
+build-type:          Simple
+
+-- Configuração do Executável
+executable SortingBenchmark
+  main-is:             Main.hs
+  hs-source-dirs:      src
+  build-depends:       base >= 4.7 && < 5
+                     , criterion
+                     , random
+  default-language:    Haskell2010
+
+-- Configuração do Benchmark
+benchmark my-benchmark
+  type:             exitcode-stdio-1.0
+  main-is:          Benchmark.hs
+  hs-source-dirs:   src
+  build-depends:    base >= 4.7 && < 5
+                   , criterion
+                   , random
+  default-language: Haskell2010
